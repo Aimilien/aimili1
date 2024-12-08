@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur de devises</title>
+    <link rel="stylesheet" href="../css/convertisseur.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="intro-text">Convertisseur de devises</h1>
+        <div class="converter">
+            <div class="converter-row">
+                <input type="number" id="amount" placeholder="Montant" />
+                <select id="fromCurrency">
+                </select>
+                <span>à</span>
+                <select id="toCurrency">
+                </select>
+            </div>
+            <button id="convertButton">Convertir</button>
+            <div class="result" id="result">Résultat : --</div>
+        </div>
+    </div>
+    <a href="../index.html" class="home-button">🏠</a>
+    <script src="../javascript/convertisseur.js"></script>
+</body>
+</html>
