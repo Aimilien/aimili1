@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/lyrics.css">
+  <title>Lyrics spotify</title>
+</head>
+<body>
+  <div class="container">
+    <h1><u>Lyrics spotify</u></h1>
+    <form id="lyricsForm">
+      <div class="form-group">
+        <label for="lyrics">Paroles</label>
+        <textarea id="lyrics" rows="4" placeholder="Entrez les paroles ici..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="artist">Nom de l'artiste</label>
+        <input type="text" id="artist" placeholder="Exemple : Baby Hayabusa">
+      </div>
+      <div class="form-group">
+        <label for="title">Titre de la chanson</label>
+        <input type="text" id="title" placeholder="Exemple : Bad">
+      </div>
+      <div class="form-group">
+        <label for="imageUpload">Image de fond</label>
+        <input type="file" id="imageUpload" accept="image/*" onchange="handleImageUpload(event)">
+      </div>
+      <button type="button" onclick="generateVisual()">Générer le visuel</button>
+      <button type="button" id="resetBtn" onclick="resetForm()">Réinitialiser</button>
+      <button type="button" id="downloadBtn" onclick="downloadImage()">📥</button>
+    </form>
+    <div id="output" style="display: none;">
+      <img id="outputImage" alt="Miniature" style="display: none;">
+      <div class="title" id="outputTitle"></div>
+      <div class="artist" id="outputArtist"></div>
+      <div class="lyrics" id="outputLyrics"></div>
+    </div>
+  </div>
+  <a href="../index.html" class="home-button">🏠</a>
+  <script src="../javascript/lyrics.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>

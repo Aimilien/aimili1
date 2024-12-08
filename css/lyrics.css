@@ -1,0 +1,153 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: white;
+    position: relative;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #2b2b2b;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #00000080;
+    border: 2px solid #1c1c1c;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #c2f750;
+    background: #444444;
+    color: white;
+    box-sizing: border-box;
+}
+
+button {
+    background: #c2f750;
+    color: #1c1c1c;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#resetBtn {
+    background: #666;
+    color: white;
+    margin-left: 10px;
+}
+
+#resetBtn:hover {
+    background: #888;
+}
+
+#downloadBtn {
+    background: #c2f750;
+    color: #1c1c1c;
+    margin-left: 10px;
+}
+
+#downloadBtn:hover {
+    transform: scale(1.05);
+}
+
+#output {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #333;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#output img {
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#output .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#output .artist {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#output .lyrics {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Style du bouton "Maison" */
+.home-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #c2f750;
+    color: #1c1c1c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.home-button:hover {
+    transform: scale(1.05);
+    background: #9ce53a;
+}
+
+.home-button span {
+    margin-left: 5px;
+}
