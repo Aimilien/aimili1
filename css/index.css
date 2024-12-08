@@ -19,9 +19,9 @@ a {
     background: #1f1f1f;
     border-radius: 20px;
     padding: 30px;
-    width: 90%; /* Ajustement pour mobile */
-    max-width: 600px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'effet iOS */
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -33,9 +33,10 @@ h1 {
 
 .project-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around; 
     gap: 1.5rem;
-    background: #2c2c2c; /* Fond gris pour l'effet téléphone */
+    background: #2c2c2c;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -43,7 +44,7 @@ h1 {
 
 .project {
     background-color: #2c2c2c;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -63,8 +64,8 @@ h1 {
 }
 
 .project img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 20%;
     object-fit: cover;
     animation: pulse 2s infinite;
@@ -72,9 +73,10 @@ h1 {
 
 .project h2 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #c2f750;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .intro-text {
@@ -141,7 +143,7 @@ h1 {
     }
 
     .project img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 }
