@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre-Feuille-Ciseaux</title>
+    <link rel="stylesheet" href="../css/chifoumi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pierre-Feuille-Ciseaux</h1>
+        <div id="game" class="game">
+            <div class="choices">
+                <button class="choice" data-choice="Pierre">
+                    ✊
+                </button>
+                <button class="choice" data-choice="Papier">
+                    ✋
+                </button>
+                <button class="choice" data-choice="Ciseaux">
+                    ✌️
+                </button>
+            </div>
+            <div class="result">
+                <p>Votre choix : <span id="userChoice">-</span></p>
+                <p>Choix de l'ordi : <span id="computerChoice">-</span></p>
+                <h2 id="outcome">Faites un choix !</h2>
+            </div>
+            <p class="scoreboard">Score: <span id="score">0</span></p>
+        </div>
+    </div>
+    <a href="../index.html" class="home-button">🏠</a>
+    <script src="../javascript/chifoumi.js"></script>
+</body>
+</html>

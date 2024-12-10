@@ -53,11 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (head.x === food.x && head.y === food.y) {
             score++;
-            scoreDisplay.textContent = score;
             food = generateFood();
         } else {
             snake.pop();
         }
+
+        scoreDisplay.textContent = score;
 
         draw();
     }
