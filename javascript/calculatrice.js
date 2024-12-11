@@ -19,6 +19,12 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
+    if (target.classList.contains('scientific')) {
+        handleScientific(target.value);
+        updateDisplay();
+        return;
+    }
+
     if (target.classList.contains('operator')) {
         handleOperator(target.value);
         updateDisplay();
@@ -89,12 +95,44 @@ function handleOperator(nextOperator) {
     calculator.operator = nextOperator;
 }
 
+function handleScientific(operation) {
+    const { displayValue } = calculator;
+    const inputValue = parseFloat(displayValue);
+
+    let result;
+    switch (operation) {
+        case 'sin':
+            result = Math.sin(inputValue * (Math.PI / 180)); // Convertir en radians
+            break;
+        case 'cos':
+            result = Math.cos(inputValue * (Math.PI / 180));
+            break;
+        case 'tan':
+            result = Math.tan(inputValue * (Math.PI / 180));
+            break;
+        case 'log':
+            result = Math.log10(inputValue);
+            break;
+        case 'sqrt':
+            result = Math.sqrt(inputValue);
+            break;
+        case 'pow':
+            calculator.firstOperand = inputValue;
+            calculator.waitingForSecondOperand = true;
+            calculator.operator = '^';
+            return;
+    }
+
+    calculator.displayValue = String(result);
+}
+
 const performCalculation = {
     '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
     '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
     '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
     '-': (firstOperand, secondOperand) => firstOperand - secondOperand,
     '=': (firstOperand, secondOperand) => secondOperand,
+    '^': (firstOperand, secondOperand) => Math.pow(firstOperand, secondOperand),
 };
 
 function resetCalculator() {

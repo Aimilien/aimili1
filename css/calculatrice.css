@@ -66,6 +66,11 @@ button.all-clear {
     background: #f74b2c;
 }
 
+button.scientific {
+    background: #4b9cf7;
+    color: #ffffff;
+}
+
 button:active {
     transform: translateY(2px);
 }
@@ -91,8 +96,4 @@ button:active {
 .home-button:hover {
     transform: scale(1.05);
     background: #9ce53a;
-}
-
-.home-button span {
-    margin-left: 5px;
 }
